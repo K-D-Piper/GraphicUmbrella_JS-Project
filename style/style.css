@@ -1,0 +1,20 @@
+.Nav-Top{
+    display: inline;
+}
+
+.Nav-Left{
+    text-align: left;
+}
+
+.Nav-Right ul li{
+    text-align: right;
+    list-style-type: none;
+    display: inline;
+}
+
+/* Nav-Top END*/
+/*Logos-Small START*/
+
+.Logos-Small{
+    display: inline;
+}
