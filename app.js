@@ -191,19 +191,68 @@ mooImage[1].addEventListener("click" , () => {
 //EventListener
 
 
-//? Saving inof based onChange
-let inputName = document.getElementById("name")
-//* Created this variable to save input values 
-let savedInfo = " ";
+//? Saving info based onChange
+// let inputName = document.getElementById("name")
+// //* Created this variable to save input values 
+// let savedInfo = " ";
 
-console.log(inputName)
+// console.log(inputName)
 
-inputName.addEventListener("change" ,() => {
-    let currentInput = inputName.innerText;
-    savedInfo += currentInput;
-    console.log(savedInfo)
-} )
+// inputName.addEventListener("input" ,() => {
+//     //? this is grabbing the inputBoxes values
+//     //! INNERTEXT IS ONLY FOR HTML text Tags 
 
+
+//     let currentInput = inputName.value; //each time there is a keystroke this varibale updates every time 
+//     savedInfo = currentInput;
+//     console.log(savedInfo);
+// } )
+
+// //! 2nd option on saving information from a input textbox
+
+// //? THIS cariable is being used to grab the imput value 
+// let inputEmail = document.querySelector("#email");
+// //* this variable is being used for the eventListener
+// let subsribeButton = document.querySelector(".subscribe input");
+// let savedEmailInfo = "";
+
+// subsribeButton.addEventListener("click" , () => {
+
+//     savedEmailInfo = inputEmail.value;
+//     //? 
+//     inputEmail.value = "";
+//     console.log(savedEmailInfo);
+// })
+
+//control / is how you comment out a large group of text 
+
+//! Saving Perosnal Information 
+//? This is going to hold my detial object of informtiaon 
+let subscribeList = [];
+//? This is my object Tempate to push into the array later
+let personInfo = {
+    name: "" , 
+    email: ""
+}; 
+
+//? This is going to grab the input text
+//! ONLY GRAB THE VALUE NOT THE NODE ELEMENT (BC WE HAVE ".value after the dom selection" ) 
+let inputName = document.querySelector("#name").ariaValueMax;
+let inputEmail = document.querySelector("#email").value;
+//? What's going to activae our input variables to grab the values? 
+//* This variable is going to be used for my eventlistener 
+let subsribeButton = document.querySelector(".subsribe input");
+
+subscribeButton.addEventLilstener("click" , grabNewsLetterInfo)
+
+function grabNewsLetterInfo(){
+    //? These variables is going to grab the input text
+    //! ONLYL GRAB THE VALUE NOT THE NODE ELEMETN (BC we )
+    personInfo.name = inputName
+    console.log(inputName)
+}
+
+//if you ever need to get an inner text use . valu eotheriwse use entertext 
 //innertext grabs other values 
 //dots/periods for class names ; # are for id section
 
@@ -214,3 +263,5 @@ inputName.addEventListener("change" ,() => {
 //What parts style choice and what parts necessary. So for example, can i write an arrow funciton like this ("click" , () => {}) (with no space for seperatin / not putting it on another line)
 
 //further clarifiy the differences of scopes 
+
+//EXPALIN WHY VARIBALES INSIDE FUCTION VS OUTSIDE FUNCITON 
