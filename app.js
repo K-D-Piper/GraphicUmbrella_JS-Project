@@ -237,7 +237,7 @@ let personInfo = {
 
 //? This is going to grab the input text
 //! ONLY GRAB THE VALUE NOT THE NODE ELEMENT (BC WE HAVE ".value after the dom selection" ) 
-let inputName = document.querySelector("#name").ariaValueMax;
+let inputName = document.querySelector("#name").value;
 let inputEmail = document.querySelector("#email").value;
 //? What's going to activae our input variables to grab the values? 
 //* This variable is going to be used for my eventlistener 
@@ -246,10 +246,19 @@ let subsribeButton = document.querySelector(".subsribe input");
 subscribeButton.addEventLilstener("click" , grabNewsLetterInfo)
 
 function grabNewsLetterInfo(){
-    //? These variables is going to grab the input text
+    //? These variables is going to grab the input NODES
     //! ONLYL GRAB THE VALUE NOT THE NODE ELEMETN (BC we )
-    personInfo.name = inputName
-    console.log(inputName)
+    personInfo.name = inputName.value
+    personInfo.email = inputEmail.value
+    console.log(personInfo);
+
+    subscribeList.push(personInfo);
+    console.log(subscribeList)
+
+
+    //? Clearing out the input boxes 
+    inputName = "";
+    inputEmail = "";
 }
 
 //if you ever need to get an inner text use . valu eotheriwse use entertext 
